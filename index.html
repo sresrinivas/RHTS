@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Health Tracking System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Remote Health Tracking System</h1>
+        <form id="healthForm">
+            <div class="input-group">
+                <label for="heartRate">Heart Rate:</label>
+                <input type="number" id="heartRate" name="heartRate" placeholder="Enter heart rate (bpm)">
+            </div>
+            <div class="input-group">
+                <label for="bloodPressure">Blood Pressure:</label>
+                <input type="text" id="bloodPressure" name="bloodPressure" placeholder="Enter blood pressure (mmHg)">
+            </div>
+            <div class="input-group">
+                <label for="temperature">Temperature:</label>
+                <input type="number" id="temperature" name="temperature" placeholder="Enter temperature (°C)">
+            </div>
+            <div class="input-group">
+                <label for="symptoms">Symptoms:</label>
+                <textarea id="symptoms" name="symptoms" placeholder="Enter symptoms"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('healthForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you can add JavaScript code to handle form submission, such as sending data to the server or performing validation
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+</html>
